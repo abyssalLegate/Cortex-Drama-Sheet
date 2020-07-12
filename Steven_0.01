@@ -1,0 +1,37 @@
+<body>
+    <table>
+       <tr>
+           <th>Character Details</th>
+       </tr>
+        <tr>
+            <th>
+                <label for="cname">Name</label>
+            </th>
+            <td>
+                <form>
+                    <input type="text" id="cname" name="cname" value="Steven Universe">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th>
+            <label for="alias">Alias(es)</label>
+            </th>
+            <td>
+                <form>
+                   <input type="text" id="alias" name="alias" value="Pink Diamond">  
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="descript">Descriptor</label>
+            </th>
+            <td>
+                <form>
+                   <input type="text" id="descript" name="descript"> 
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
