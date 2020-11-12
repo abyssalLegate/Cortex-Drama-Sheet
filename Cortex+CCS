@@ -1,17 +1,129 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat')
-.charsheet {
-    background-color:white;
+div.sheet-stress-row {
+    display: grid;
+    grid-template-columns: 40px 100px 60px 60px 60px 60px 60px;
+    column-gap: 5px;
 }
-.sheet- table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  font-family:'Montserrat';
+div.sheet-stress-row button {
+    width: 20px;
 }
-.sheet- th, td {
-  padding: 5px;
-  text-align: left;    
+.sheet-dots{
+    display:flex;
 }
-.sheet-h1 {
-    background-color:orange;
-    color:White;
+button.sheet-dot {
+  padding: 0;
+  border: solid 1px #a8a8a8;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+button.sheet-dot > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: buttontext;
+}
+input.sheet-dot[value="1"] ~ button.sheet-gt-1 > span.sheet-checked {
+  display: none;
+}
+input.sheet-dot[value="2"] ~ button.sheet-gt-2 > span.sheet-checked {
+  display: none;
+}
+input.sheet-dot[value="3"] ~ button.sheet-gt-3 > span.sheet-checked {
+  display: none;
+}
+input.sheet-dot[value="4"] ~ button.sheet-gt-4 > span.sheet-checked {
+  display: none;
+}
+div.sheet-value-row {
+    display: grid;
+    grid-template-columns: 40px 150px 60px  60px 500px;
+    column-gap: 5px;
+}
+div.sheet-value-row button {
+    width: 20px;
+}
+div.sheet-value-row input[type="checkbox"] {
+    width: 20px;
+}
+div.sheet-value-row select {
+    width: 60px;
+}
+div.sheet-value-row input[type="text"] {
+    width: 500px;
+}
+div.sheet-relationship-row {
+    display: grid;
+    grid-template-columns: 40px 60px 60px 500px;
+    column-gap: 5px;
+}
+div.sheet-relationship-row button {
+    width:20px;
+}
+div.sheet-relationship-row input[type="text"] {
+    width: 500px;
+}
+div.sheet-relationship-row select {
+    width: 60px;
+}
+div.sheet-asset-row {
+    display: grid;
+    grid-template-columns: 40px 150px 60px 500px;
+    column-gap: 5px;
+}
+div.sheet-asset-row button {
+    width:20px;
+}
+div.sheet-asset-row input[type="text"] {
+    width: 150px;
+}
+div.sheet-asset-row input[type="number"] {
+    width: 60px;
+}
+div.sheet-asset-row select {
+    width: 60px;
+}
+div.sheet-body input[type="text"] {
+    width: 500px;
+}
+input.sheet-toggle-show:not(:checked) ~ div.sheet-body, {
+    display: none;
+}
+div.sheet-extras-row {
+    display: grid;
+    grid-template-columns: 40px 150px 60px 300px;
+    column-gap: 5px;
+}
+div.sheet-extras-row button {
+    width:20px;
+}
+div.sheet-extras-row input[type="text" name="attr_extras_name"] {
+    width: 150px;
+}
+div.sheet-extras-row select {
+    width: 60px;
+}
+div.sheet-extras-row input[type="text" name="attr_extras_property"] {
+    width: 150px;
+}
+div.sheet-locations-row {
+    display: grid;
+    grid-template-columns: 40px 150px 60px 300px;
+    column-gap: 5px;
+}
+div.sheet-locations-row button {
+    width:20px;
+}
+div.sheet-locations-row input[type="text" name="attr_locations_name"] {
+    width: 150px;
+}
+div.sheet-locations-row select {
+    width: 60px;
+}
+div.sheet-locations-row input[type="text" name="attr_locations_property"] {
+    width: 150px;
 }
