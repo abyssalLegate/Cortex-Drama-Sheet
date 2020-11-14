@@ -1,14 +1,60 @@
-div.sheet-stress-row {
-    display: grid;
-    grid-template-columns: 40px 100px 60px 60px 60px 60px 60px;
-    column-gap: 5px;
+.sheet-character-container {
+    display:grid;
+    background: white;
+    width: 285px;
+    padding: 10px;
 }
-div.sheet-stress-row button {
+.sheet-character-header {
+    grid-column: 1 / span 2;
+    background: #ffa24f;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
+}
+.sheet-character-menu {
+    background: #e6e6e6;
+    font-weight:bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.sheet-character-main {
+    width: 200px;
+}
+/*Character Details ends here*/
+div.sheet-stress {
+    background: white;
+    width: 530px;
+    padding: 10px;
+}
+.sheet-stress-row{
+  display: grid;
+  grid-template-columns: 35px 100px 40px 40px 40px 40px 40px 40px
+}
+h4.sheet-stress-header {
+    background: #a81e48;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+h4.sheet-stress-header1 {
+    background: #a81e48;
+    color: white;
+    font-weight: bold;
+    padding-left: 5px;
+}
+div.sheet-stress-menu {
+    background: #e6e6e6;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.sheet-stress-button {
     width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 5px;
 }
-.sheet-dots{
-    display:flex;
-}
+/* Configure the button styling. This example makes it look like a radio. */
 button.sheet-dot {
   padding: 0;
   border: solid 1px #a8a8a8;
@@ -19,111 +65,292 @@ button.sheet-dot {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  margin-left: 12px;
 }
+
 button.sheet-dot > span {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: buttontext;
 }
-input.sheet-dot[value="1"] ~ button.sheet-gt-1 > span.sheet-checked {
+
+/* Hide the "checked" section of the radio if the hidden attribute value is greater than the button value */
+input.sheet-dot[value="0"] ~ button.sheet-gt-0 > span.sheet-checked {
   display: none;
 }
-input.sheet-dot[value="2"] ~ button.sheet-gt-2 > span.sheet-checked {
+input.sheet-dot[value="d4"] ~ button.sheet-gt-d4 > span.sheet-checked {
   display: none;
 }
-input.sheet-dot[value="3"] ~ button.sheet-gt-3 > span.sheet-checked {
+input.sheet-dot[value="d6"] ~ button.sheet-gt-d6 > span.sheet-checked {
   display: none;
 }
-input.sheet-dot[value="4"] ~ button.sheet-gt-4 > span.sheet-checked {
+input.sheet-dot[value="d8"] ~ button.sheet-gt-d8 > span.sheet-checked {
   display: none;
 }
-div.sheet-value-row {
-    display: grid;
-    grid-template-columns: 40px 150px 60px  60px 500px;
-    column-gap: 5px;
+input.sheet-dot[value="d10"] ~ button.sheet-gt-d10 > span.sheet-checked {
+  display: none;
 }
-div.sheet-value-row button {
-    width: 20px;
+/*Stress section ends here*/
+.sheet-growth-container {
+    display:grid;
+    background: white;
+    width: 80px;
+    padding: 10px;
 }
-div.sheet-value-row input[type="checkbox"] {
-    width: 20px;
+.sheet-growth-header {
+    grid-column: 1 / span 2;
+    background: #3a7a6b;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
 }
-div.sheet-value-row select {
+.sheet-growth-menu {
+    background: #e6e6e6;
+    font-weight:bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/*Growth Section ends here*/
+.sheet-plot-container {
+    display:grid;
+    background: white;
+    width: 110px;
+    padding: 10px;
+}
+.sheet-plot-header {
+    background: #ebd647;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
+    text-align: center;
+}
+.sheet-plot-header1 {
+    background: #c90b47;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+.sheet-plot-main {
+    margin-left: 30px;
+}
+
+/*Plot Points and Complications ends here*/
+.sheet-value-container {
+    display:grid;
+    background: white;
+    width: 740px;
+    padding: 10px;
+}
+.sheet-value-header {
+    grid-column: 2 / span 4;
+    background: #042254;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
+}
+.sheet-value-header1 {
+    background: #e6e6e6;
+    font-weight:bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.sheet-value-header2 {
+    background: #bfbfbf;
+}
+.sheet-value-menu {
+    background: #e6e6e6;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.sheet-value-main {
     width: 60px;
+    margin-left: 5px;
 }
-div.sheet-value-row input[type="text"] {
+.sheet-value-main1 {
     width: 500px;
+}
+.sheet-value-button {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 5px;
+}
+/*Values Section ends here*/
+div.sheet-relationship {
+    background: white;
+    width: 675px;
+    padding: 10px;
 }
 div.sheet-relationship-row {
-    display: grid;
-    grid-template-columns: 40px 60px 60px 500px;
-    column-gap: 5px;
+    display:grid;
+    grid-template-columns: 30px 70px 70px 505px;
 }
-div.sheet-relationship-row button {
-    width:20px;
+h4.sheet-relationship-header {
+    grid-column: 2 / span 3;
+    background: #d478a0;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
 }
-div.sheet-relationship-row input[type="text"] {
-    width: 500px;
+h4.sheet-relationship-menu {
+    background: #e6e6e6;
+    font-weight:bold;
+    padding-left: 5px;
+    padding-right: 5px;
 }
-div.sheet-relationship-row select {
+.sheet-relationship-main {
     width: 60px;
+    margin-left: 5px;
+}
+.sheet-relationship-main1 {
+    width: 500px;
+    margin-left: 5px;
+}
+.sheet-relationship-button {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+}
+/*Relationships Section ends here*/
+div.sheet-asset {
+    background: white;
+    width: 750px;
+    padding: 10px;
 }
 div.sheet-asset-row {
-    display: grid;
-    grid-template-columns: 40px 150px 60px 500px;
-    column-gap: 5px;
+    display:grid;
+    grid-template-columns: 30px 150px 70px 500px;
 }
-div.sheet-asset-row button {
-    width:20px;
+h4.sheet-asset-header {
+    grid-column: 2 / span 3;
+    background: #aa6a6b;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
 }
-div.sheet-asset-row input[type="text"] {
-    width: 150px;
+h4.sheet-asset-menu {
+    background: #e6e6e6;
+    font-weight:bold;
+    padding-left: 10px;
+    padding-right: 5px;
 }
-div.sheet-asset-row input[type="number"] {
+.sheet-asset-main {
     width: 60px;
+    margin-left: 10px;
 }
-div.sheet-asset-row select {
+.sheet-asset-main1 {
+    width: 150px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.sheet-asset-main2 {
+    max-width: 485px;
+    min-width: 485px;
+    height: 50px;
+    margin-left: 5px;
+    word-wrap: break-word;
+}
+.sheet-asset-button {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+}
+/*Asset Section ends here*/
+div.sheet-extra {
+    background: white;
+    width: 530px;
+    padding: 10px;
+}
+div.sheet-extra-row {
+    display:grid;
+    grid-template-columns: 30px 150px 70px 280px;
+}
+h4.sheet-extra-header {
+    grid-column: 2 / span 3;
+    background: #3578ac;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
+}
+h4.sheet-extra-menu {
+    background: #e6e6e6;
+    font-weight:bold;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.sheet-extra-main {
     width: 60px;
+    margin-left: 10px;
 }
-div.sheet-body input[type="text"] {
-    width: 500px;
-}
-input.sheet-toggle-show:not(:checked) ~ div.sheet-body, {
-    display: none;
-}
-div.sheet-extras-row {
-    display: grid;
-    grid-template-columns: 40px 150px 60px 300px;
-    column-gap: 5px;
-}
-div.sheet-extras-row button {
-    width:20px;
-}
-div.sheet-extras-row input[type="text" name="attr_extras_name"] {
+.sheet-extra-main1 {
     width: 150px;
+    font-weight: bold;
+    margin-left: 5px;
 }
-div.sheet-extras-row select {
+.sheet-extra-main2 {
+    width: 275px;
+    height: 50px;
+    margin-left: 5px;
+    word-wrap: break-word;
+}
+.sheet-extra-button {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+}
+/*Extras Section ends here*/
+div.sheet-location {
+    background: white;
+    width: 530px;
+    padding: 10px;
+}
+div.sheet-location-row {
+    display:grid;
+    grid-template-columns: 30px 150px 70px 280px;
+}
+h4.sheet-location-header {
+    grid-column: 2 / span 3;
+    background: #0f4136;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
+}
+h4.sheet-location-menu {
+    background: #e6e6e6;
+    font-weight:bold;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.sheet-location-main {
     width: 60px;
+    margin-left: 10px;
 }
-div.sheet-extras-row input[type="text" name="attr_extras_property"] {
+.sheet-location-main1 {
     width: 150px;
+    font-weight: bold;
+    margin-left: 5px;
 }
-div.sheet-locations-row {
-    display: grid;
-    grid-template-columns: 40px 150px 60px 300px;
-    column-gap: 5px;
+.sheet-location-main2 {
+    width: 275px;
+    height: 50px;
+    margin-left: 5px;
+    word-wrap: break-word;
 }
-div.sheet-locations-row button {
-    width:20px;
+.sheet-location-button {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
 }
-div.sheet-locations-row input[type="text" name="attr_locations_name"] {
-    width: 150px;
-}
-div.sheet-locations-row select {
-    width: 60px;
-}
-div.sheet-locations-row input[type="text" name="attr_locations_property"] {
-    width: 150px;
-}
+/*Locations Section ends here*/
