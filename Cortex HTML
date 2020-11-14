@@ -171,7 +171,7 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <select class="value-main" name="attr_dutycurr">
+    <select class="value-main" name="attr_dutycurrent">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
@@ -190,7 +190,7 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <select class="value-main" name="attr_glorycurr">
+    <select class="value-main" name="attr_glorycurrent">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
@@ -209,7 +209,7 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <select class="value-main" name="attr_justicecurr">
+    <select class="value-main" name="attr_justicecurrent">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
@@ -228,7 +228,7 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <select class="value-main" name="attr_lovecurr">
+    <select class="value-main" name="attr_lovecurrent">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
@@ -247,7 +247,7 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <select class="value-main" name="attr_powercurr">
+    <select class="value-main" name="attr_powercurrent">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
@@ -266,7 +266,7 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <select class="value-main" name="attr_truthcurr">
+    <select class="value-main" name="attr_truthcurrent">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
