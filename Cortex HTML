@@ -22,7 +22,12 @@
         <h4 class="stress-header">d12</h4>
     </div>
     <div class="stress-row">
-        <button class="stress-button" type="act" name="act_afraid"></button>
+        <div class="toggle-container">
+          <input type="hidden" class="toggle" name="attr_afraid_flag" />
+          <button type="action" name="act_afraid" class="toggle">
+            <span class="checked">✓</span>
+          </button>
+        </div>
         <div class="stress-menu">AFRAID</div>
         <input type="hidden" name="attr_afraid" class="dot" value="1" />
         <button type="action" name="act_afraid_0" class="dot">
@@ -44,7 +49,12 @@
         </button>
     </div>
     <div class="stress-row">
-        <button class="stress-button" type="act" name="act_angry"></button>
+        <div class="toggle-container">
+          <input type="hidden" class="toggle" name="attr_angry_flag" />
+          <button type="action" name="act_angry" class="toggle">
+            <span class="checked">✓</span>
+          </button>
+        </div>
         <div class="stress-menu">ANGRY</div>
         <input type="hidden" name="attr_angry" class="dot" value="1" />
         <button type="action" name="act_angry_0" class="dot">
@@ -66,7 +76,12 @@
         </button>
     </div>
     <div class="stress-row">
-        <button class="stress-button" type="act" name="act_exhausted"></button>
+        <div class="toggle-container">
+          <input type="hidden" class="toggle" name="attr_exhausted_flag" />
+          <button type="action" name="act_exhausted" class="toggle">
+            <span class="checked">✓</span>
+          </button>
+        </div>
         <div class="stress-menu">EXHAUSTED</div>
         <input type="hidden" name="attr_exhausted" class="dot" value="1" />
         <button type="action" name="act_exhausted_0" class="dot">
@@ -88,7 +103,12 @@
         </button>
     </div>
         <div class="stress-row">
-        <button class="stress-button" type="act" name="act_insecure"></button>
+        <div class="toggle-container">
+          <input type="hidden" class="toggle" name="attr_insecure_flag" />
+          <button type="action" name="act_insecure" class="toggle">
+            <span class="checked">✓</span>
+          </button>
+        </div>
         <div class="stress-menu">INSECURE</div>
         <input type="hidden" name="attr_insecure" class="dot" value="1" />
         <button type="action" name="act_insecure_0" class="dot">
@@ -110,7 +130,12 @@
         </button>
     </div>
     <div class="stress-row">
-        <button class="stress-button" type="act" name="act_injured"></button>
+        <div class="toggle-container">
+          <input type="hidden" class="toggle" name="attr_injured_flag" />
+          <button type="action" name="act_injured" class="toggle">
+            <span class="checked">✓</span>
+          </button>
+        </div>
         <div class="stress-menu">INJURED</div>
         <input type="hidden" name="attr_injured" class="dot" value="1" />
         <button type="action" name="act_injured_0" class="dot">
@@ -161,8 +186,21 @@
     <h4 class="value-header1">Rating</h4>
     <h4 class="value-header1">Current</h4>
     <h4 class="value-header1">Statement</h4>
-    <button class="value-button" type="action" name="act_duty"></button>
+    <div class="toggle-container">
+      <input type="hidden" class="toggle" name="attr_duty_flag" />
+      <button type="action" name="act_duty" class="toggle">
+        <span class="checked">✓</span>
+      </button>
+    </div>
     <div class="value-menu">DUTY</div>
+    <select class="value-main" name="attr_dutybase">
+        <option value="0" selected>-</option>
+        <option value="d4">d4</option>
+        <option value="d6">d6</option>
+        <option value="d8">d8</option>
+        <option value="d10">d10</option>
+        <option value="d12">d12</option> 
+    </select>
     <select class="value-main" name="attr_duty">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
@@ -171,7 +209,15 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <select class="value-main" name="attr_dutycurrent">
+    <input class="value-main1" type="text" name="attr_duty_statement">
+    <div class="toggle-container">
+      <input type="hidden" class="toggle" name="attr_glory_flag" />
+      <button type="action" name="act_glory" class="toggle">
+        <span class="checked">✓</span>
+      </button>
+    </div>
+    <div class="value-menu">GLORY</div>
+    <select class="value-main" name="attr_glorybase">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
@@ -179,9 +225,6 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <input class="value-main1" type="text" name="attr_duty_statement">
-    <button class="value-button" type="action" name="act_glory"></button>
-    <div class="value-menu">GLORY</div>
     <select class="value-main" name="attr_glory">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
@@ -190,7 +233,15 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <select class="value-main" name="attr_glorycurrent">
+    <input class="value-main1" type="text" name="attr_glory_statement">
+    <div class="toggle-container">
+      <input type="hidden" class="toggle" name="attr_justice_flag" />
+      <button type="action" name="act_justice" class="toggle">
+        <span class="checked">✓</span>
+      </button>
+    </div>
+    <div class="value-menu">JUSTICE</div>
+    <select class="value-main" name="attr_justicebase">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
@@ -198,9 +249,6 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <input class="value-main1" type="text" name="attr_glory_statement">
-    <button class="value-button" type="action" name="act_justice"></button>
-    <div class="value-menu">JUSTICE</div>
     <select class="value-main" name="attr_justice">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
@@ -209,7 +257,15 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <select class="value-main" name="attr_justicecurrent">
+    <input class="value-main1" type="text" name="attr_justice_statement">
+    <div class="toggle-container">
+      <input type="hidden" class="toggle" name="attr_love_flag" />
+      <button type="action" name="act_love" class="toggle">
+        <span class="checked">✓</span>
+      </button>
+    </div>
+    <div class="value-menu">LOVE</div>
+    <select class="value-main" name="attr_lovebase">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
@@ -217,9 +273,6 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <input class="value-main1" type="text" name="attr_justice_statement">
-    <button class="value-button" type="action" name="act_love"></button>
-    <div class="value-menu">LOVE</div>
     <select class="value-main" name="attr_love">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
@@ -228,7 +281,15 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <select class="value-main" name="attr_lovecurrent">
+    <input class="value-main1" type="text" name="attr_love_statement">
+    <div class="toggle-container">
+      <input type="hidden" class="toggle" name="attr_power_flag" />
+      <button type="action" name="act_power" class="toggle">
+        <span class="checked">✓</span>
+      </button>
+    </div>
+    <div class="value-menu">POWER</div>
+    <select class="value-main" name="attr_powerbase">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
@@ -236,9 +297,6 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <input class="value-main1" type="text" name="attr_love_statement">
-    <button class="value-button" type="action" name="act_power"></button>
-    <div class="value-menu">POWER</div>
     <select class="value-main" name="attr_power">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
@@ -247,18 +305,15 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <select class="value-main" name="attr_powercurrent">
-        <option value="0" selected>-</option>
-        <option value="d4">d4</option>
-        <option value="d6">d6</option>
-        <option value="d8">d8</option>
-        <option value="d10">d10</option>
-        <option value="d12">d12</option> 
-    </select>
     <input class="value-main1" type="text" name="attr_power_statement">
-    <button class="value-button" type="action" name="act_truth"></button>
+    <div class="toggle-container">
+      <input type="hidden" class="toggle" name="attr_truth_flag" />
+      <button type="action" name="act_truth" class="toggle">
+        <span class="checked">✓</span>
+      </button>
+    </div>
     <div class="value-menu">TRUTH</div>
-    <select class="value-main" name="attr_truth">
+    <select class="value-main" name="attr_truthbase">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
@@ -266,7 +321,7 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option> 
     </select>
-    <select class="value-main" name="attr_truthcurrent">
+    <select class="value-main" name="attr_truth">
         <option value="0" selected>-</option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
@@ -289,8 +344,13 @@
     </div>
     <fieldset class="repeating_relationship">
         <div class="relationship-row">
-            <button class="relationship-button" type="act" name="act_relationship"></button>
-            <select class="relationship-main" name="attr_relationship">
+            <div class="toggle-container">
+              <input type="hidden" class="toggle" name="attr_relationship_flag" />
+              <button type="action" name="act_relationship" class="toggle">
+                <span class="checked">✓</span>
+              </button>
+            </div>
+            <select class="relationship-main" name="attr_relationshipbase">
                 <option value="0" selected>-</option>
                 <option value="d4">d4</option>
                 <option value="d6">d6</option>
@@ -298,7 +358,7 @@
                 <option value="d10">d10</option>
                 <option value="d12">d12</option>
             </select>
-            <select class="relationship-main" name="attr_relationshipcurrent">
+            <select class="relationship-main" name="attr_relationship">
                 <option value="0" selected>-</option>
                 <option value="d4">d4</option>
                 <option value="d6">d6</option>
@@ -323,7 +383,12 @@
     </div>
     <fieldset class="repeating_asset">
         <div class="asset-row">
-            <button class="asset-button" type="act" name="act_asset"></button>
+            <div class="toggle-container">
+              <input type="hidden" class="toggle" name="attr_asset_flag" />
+              <button type="action" name="act_asset" class="toggle">
+                <span class="checked">✓</span>
+              </button>
+            </div>
             <input class="asset-main1" type="text" name="attr_asset_name">
             <select class="asset-main" name="attr_asset">
                 <option value="0" selected>-</option>
@@ -350,7 +415,12 @@
     </div>
     <fieldset class="repeating_extra">
         <div class="extra-row">
-            <button class="extra-button" type="act" name="act_extra"></button>
+            <div class="toggle-container">
+              <input type="hidden" class="toggle" name="attr_extra_flag" />
+              <button type="action" name="act_extra" class="toggle">
+                <span class="checked">✓</span>
+              </button>
+            </div>
             <input class="extra-main1" type="text" name="attr_extra_name">
             <select class="extra-main" name="attr_extra">
                 <option value="0" selected>-</option>
@@ -375,9 +445,14 @@
         <h4 class="location-menu">Rating</h4>
         <h4 class="location-menu">Properties</h4>
     </div>
-    <fieldset class="repeating_extra">
+    <fieldset class="repeating_location">
         <div class="location-row">
-            <button class="location-button" type="act" name="act_location"></button>
+            <div class="toggle-container">
+              <input type="hidden" class="toggle" name="attr_location_flag" />
+              <button type="action" name="act_location" class="toggle">
+                <span class="checked">✓</span>
+              </button>
+            </div>
             <input class="location-main1" type="text" name="attr_location_name">
             <select class="location-main" name="attr_location">
                 <option value="0" selected>-</option>
@@ -393,43 +468,27 @@
 </div>
 
 <script type="text/worker">
-  const afraidValues= ["0","d4","d6","d8","d10","d12"];
-  afraidValues.forEach(function(value) {
-    on(`clicked:afraid_${value}`, function() {
-      setAttrs({
-        "afraid": value
-      });
+const diceValues= ['0','d4','d6','d8','d10','d12'];
+const conditions = ['afraid', 'angry', 'exhausted', 'insecure', 'injured'];
+conditions.forEach(function(condition) {
+    diceValues.forEach(function(value) {
+        on(`clicked:${condition}_${value}`, function() {
+            setAttrs({
+                [condition]: value
+            });
+        });
     });
-  });
-  const angryValues= ["0","d4","d6","d8","d10","d12"];
-  angryValues.forEach(function(value) {
-    on(`clicked:angry_${value}`, function() {
-      setAttrs({
-        "angry": value
-      });
-    });
-  });
-  const exhaustedValues= ["0","d4","d6","d8","d10","d12"];
-  exhaustedValues.forEach(function(value) {
-    on(`clicked:exhausted_${value}`, function() {
-      setAttrs({
-        "exhausted": value
-      });
-    });
-  });
-  const insecureValues= ["0","d4","d6","d8","d10","d12"];
-  insecureValues.forEach(function(value) {
-    on(`clicked:insecure_${value}`, function() {
-      setAttrs({
-        "insecure": value
-      });
-    });
-  });
-  const injuredValues= ["0","d4","d6","d8","d10","d12"];
-  injuredValues.forEach(function(value) {
-    on(`clicked:injured_${value}`, function() {
-      setAttrs({
-        "injured": value
+});
+  const toggleList = ["afraid","angry","exhausted","insecure","injured","duty","glory","justice","love","power","truth","relationship","asset","extra","location"];
+  toggleList.forEach(function(button) {
+    on(`clicked:${button}`, function() {
+      const flag = `${button}_flag`;
+      // Check the current value of the hidden flag.
+      getAttrs([flag], function(v) {
+        // Update the value of the hidden flag to "1" for checked or "0" for unchecked.
+        setAttrs({
+          [flag]: v[flag] !== "1" ? "1" : "0"
+        });
       });
     });
   });
