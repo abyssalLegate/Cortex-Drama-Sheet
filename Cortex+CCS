@@ -1,34 +1,22 @@
-/* Configure a container for the toggle */
-.sheet-toggle-container {
-  display: inline-flex;
-  align-items: center;
+div.sheet-box1 {
+    width: 760px;
+    height: 430px;
+}
+div.sheet-box2 {
+    position: relative;
+    top: -430px;
+    left: 760px;
+    width: 1190px;
+    height: 500px;
 }
 
-/* Configure the button styling. This example makes it look like a checkbox. */
-button.sheet-toggle {
-  padding: 0;
-  border: solid 1px #a8a8a8;
-  cursor: pointer;
-
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 12px;
-}
-
-/* Hide the "checked" section of the toggle if the attribute value is not "1". */
-input.sheet-toggle:not([value="1"]) ~ button.sheet-toggle > span.sheet-checked {
-  display: none;
-}
 /*checkmark section ends here*/
 .sheet-character-container {
+    position: relative;
+    left: 22px;
     display:grid;
     background: white;
-    width: 285px;
+    width: 305px;
     padding: 10px;
 }
 .sheet-character-header {
@@ -42,21 +30,31 @@ input.sheet-toggle:not([value="1"]) ~ button.sheet-toggle > span.sheet-checked {
 .sheet-character-menu {
     background: #e6e6e6;
     font-weight:bold;
+    height: 37px;
     padding-left: 5px;
     padding-right: 5px;
 }
 .sheet-character-main {
-    width: 200px;
+    width: 222px;
+}
+.sheet-character-main1 {
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    width: 222px;
 }
 /*Character Details ends here*/
-div.sheet-stress {
+div.sheet-stress-container {
+    position: relative;
+    left: 345px;
+    top: -188px;
     background: white;
-    width: 530px;
+    width: 395px;
     padding: 10px;
 }
 .sheet-stress-row{
   display: grid;
-  grid-template-columns: 35px 100px 40px 40px 40px 40px 40px 40px
+  grid-template-columns: 25px 100px 45px 45px 45px 45px 45px 45px
 }
 h4.sheet-stress-header {
     background: #a81e48;
@@ -72,14 +70,9 @@ h4.sheet-stress-header1 {
 }
 div.sheet-stress-menu {
     background: #e6e6e6;
+    height: 30px;
     padding-left: 10px;
     padding-right: 5px;
-}
-.sheet-stress-button {
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-    margin-right: 5px;
 }
 /* Configure the button styling. This example makes it look like a radio. */
 button.sheet-dot {
@@ -119,8 +112,84 @@ input.sheet-dot[value="d10"] ~ button.sheet-gt-d10 > span.sheet-checked {
   display: none;
 }
 /*Stress section ends here*/
+div.sheet-relationship {
+    background: white;
+    position: relative;
+    top: -193px;
+    width: 740px;
+    padding: 10px;
+    z-index:0.01;
+}
+div.sheet-relationship-row {
+    display:grid;
+    grid-template-columns: 22px 70px 70px 578px;
+}
+h4.sheet-relationship-header {
+    grid-column: 2 / span 3;
+    background: #d478a0;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
+}
+h4.sheet-relationship-menu {
+    background: #e6e6e6;
+    font-weight:bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.sheet-relationship-main {
+    width: 60px;
+}
+.sheet-relationship-main1 {
+    width: 578px;
+}
+/*Relationships Section ends here*/
+div.sheet-asset-container {
+    background: white;
+    position: relative;
+    top: -202px;
+    width: 740px;
+    padding: 10px;
+}
+div.sheet-asset-row {
+    display:grid;
+    grid-template-columns: 22px 150px 70px 500px;
+}
+h4.sheet-asset-header {
+    grid-column: 2 / span 3;
+    background: #aa6a6b;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
+}
+h4.sheet-asset-menu {
+    background: #e6e6e6;
+    font-weight:bold;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.sheet-asset-main {
+    width: 60px;
+    margin-left: 5px;
+}
+.sheet-asset-main1 {
+    width: 150px;
+    font-weight: bold;
+}
+.sheet-asset-main2 {
+    max-width: 490px;
+    min-width: 490px;
+    height: 50px;
+    word-wrap: break-word;
+}
+/*Asset Section ends here*/
 .sheet-growth-container {
     display:grid;
+    position: relative;
+    left: 22px;
+    top:;
     background: white;
     width: 80px;
     padding: 10px;
@@ -136,14 +205,21 @@ input.sheet-dot[value="d10"] ~ button.sheet-gt-d10 > span.sheet-checked {
 .sheet-growth-menu {
     background: #e6e6e6;
     font-weight:bold;
+    height: 30px;
     padding-left: 5px;
     padding-right: 5px;
+}
+.sheet-growth-main {
+    text-align: ;
 }
 /*Growth Section ends here*/
 .sheet-plot-container {
     display:grid;
+    position: relative;
+    left: 122px;
+    top: -190px;
     background: white;
-    width: 110px;
+    width: 105px;
     padding: 10px;
 }
 .sheet-plot-header {
@@ -152,26 +228,45 @@ input.sheet-dot[value="d10"] ~ button.sheet-gt-d10 > span.sheet-checked {
     font-weight: bold;
     font-size: 14px;
     padding-left: 5px;
-    text-align: center;
-}
-.sheet-plot-header1 {
-    background: #c90b47;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    padding-left: 5px;
-    padding-right: 5px;
-    text-align: center;
 }
 .sheet-plot-main {
-    margin-left: 30px;
+    font-size: 30px;
+    text-align: center;
 }
-
 /*Plot Points and Complications ends here*/
+.sheet-dice-container {
+    display: grid;
+    position: relative;
+    top: -274px;
+    left:242px;
+    background:white;
+    width: 140px;
+    padding:10px;
+}
+.sheet-dice-header {
+    grid-column: 2 / span 2;
+    font-weight: bold;
+    background: orange;
+    color: white;
+    padding-left: 10px;
+    margin-left: 5px;
+}
+h4.sheet-dice-menu {
+    background: #e6e6e6;
+    font-weight:bold;
+    width: 60px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-left: 5px;
+}
+/*dice Section ends here*/
 .sheet-value-container {
     display:grid;
     background: white;
-    width: 740px;
+    position: relative;
+    top: -280px;
+    width: 770px;
     padding: 10px;
 }
 .sheet-value-header {
@@ -202,105 +297,19 @@ input.sheet-dot[value="d10"] ~ button.sheet-gt-d10 > span.sheet-checked {
     margin-left: 5px;
 }
 .sheet-value-main1 {
-    width: 500px;
-}
-.sheet-value-button {
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-    margin-right: 5px;
+    width: 545px;
 }
 /*Values Section ends here*/
-div.sheet-relationship {
+div.sheet-resources {
     background: white;
-    width: 675px;
+    position: relative;
+    top: -290px;
+    width: 874px;
     padding: 10px;
 }
-div.sheet-relationship-row {
+div.sheet-resources-row {
     display:grid;
-    grid-template-columns: 30px 70px 70px 505px;
-}
-h4.sheet-relationship-header {
-    grid-column: 2 / span 3;
-    background: #d478a0;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    padding-left: 5px;
-}
-h4.sheet-relationship-menu {
-    background: #e6e6e6;
-    font-weight:bold;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-.sheet-relationship-main {
-    width: 60px;
-    margin-left: 5px;
-}
-.sheet-relationship-main1 {
-    width: 500px;
-    margin-left: 5px;
-}
-.sheet-relationship-button {
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-}
-/*Relationships Section ends here*/
-div.sheet-asset {
-    background: white;
-    width: 750px;
-    padding: 10px;
-}
-div.sheet-asset-row {
-    display:grid;
-    grid-template-columns: 30px 150px 70px 500px;
-}
-h4.sheet-asset-header {
-    grid-column: 2 / span 3;
-    background: #aa6a6b;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    padding-left: 5px;
-}
-h4.sheet-asset-menu {
-    background: #e6e6e6;
-    font-weight:bold;
-    padding-left: 10px;
-    padding-right: 5px;
-}
-.sheet-asset-main {
-    width: 60px;
-    margin-left: 10px;
-}
-.sheet-asset-main1 {
-    width: 150px;
-    font-weight: bold;
-    margin-left: 5px;
-}
-.sheet-asset-main2 {
-    max-width: 485px;
-    min-width: 485px;
-    height: 50px;
-    margin-left: 5px;
-    word-wrap: break-word;
-}
-.sheet-asset-button {
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-}
-/*Asset Section ends here*/
-div.sheet-extra {
-    background: white;
-    width: 530px;
-    padding: 10px;
-}
-div.sheet-extra-row {
-    display:grid;
-    grid-template-columns: 30px 150px 70px 280px;
+    grid-template-columns: 22px 125px 70px 162px 10px 22px 125px 70px 162px;
 }
 h4.sheet-extra-header {
     grid-column: 2 / span 3;
@@ -310,74 +319,54 @@ h4.sheet-extra-header {
     font-size: 14px;
     padding-left: 5px;
 }
-h4.sheet-extra-menu {
-    background: #e6e6e6;
-    font-weight:bold;
-    padding-left: 10px;
-    padding-right: 5px;
-}
-.sheet-extra-main {
-    width: 60px;
-    margin-left: 10px;
-}
-.sheet-extra-main1 {
-    width: 150px;
-    font-weight: bold;
-    margin-left: 5px;
-}
-.sheet-extra-main2 {
-    width: 275px;
-    height: 50px;
-    margin-left: 5px;
-    word-wrap: break-word;
-}
-.sheet-extra-button {
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-}
-/*Extras Section ends here*/
-div.sheet-location {
-    background: white;
-    width: 530px;
-    padding: 10px;
-}
-div.sheet-location-row {
-    display:grid;
-    grid-template-columns: 30px 150px 70px 280px;
-}
-h4.sheet-location-header {
-    grid-column: 2 / span 3;
+h4.sheet-locations-header {
+    grid-column: 7 / span 3;
     background: #0f4136;
     color: white;
     font-weight: bold;
     font-size: 14px;
     padding-left: 5px;
 }
-h4.sheet-location-menu {
+h4.sheet-resources-menu {
     background: #e6e6e6;
     font-weight:bold;
     padding-left: 10px;
     padding-right: 5px;
 }
-.sheet-location-main {
+.sheet-resources-main {
     width: 60px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
-.sheet-location-main1 {
-    width: 150px;
+.sheet-resources-main1 {
+    width: 125px;
     font-weight: bold;
-    margin-left: 5px;
 }
-.sheet-location-main2 {
-    width: 275px;
-    height: 50px;
-    margin-left: 5px;
+.sheet-resources-main2 {
+    min-width: 152px;
+    max-width: 152px;
+    height: 20px;
+    margin-left: px;
     word-wrap: break-word;
 }
-.sheet-location-button {
-    width: 20px;
-    height: 20px;
-    padding: 2px;
+/*Extras and Locations Section ends here*/
+.sheet-dice-container {
+    display: grid;
+    background:white;
+    width: 140px;
+    padding:10px;
 }
-/*Locations Section ends here*/
+.sheet-dice-header {
+    grid-column: 2 / span 2;
+    font-weight: bold;
+    background: orange;
+    color: white;
+    padding-left: 10px;
+}
+h4.sheet-dice-menu {
+    background: #e6e6e6;
+    font-weight:bold;
+    width: 60px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+/*dice Section ends here*/
