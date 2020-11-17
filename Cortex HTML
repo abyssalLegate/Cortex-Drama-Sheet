@@ -10,6 +10,7 @@
         <div class="character-menu">Descriptors</div>
         <input class="character-main" type="text" name="attr_descriptors">
     </div>
+    
     <div class="stress-container">
         <div class="stress-row">
             <h4></h4>
@@ -213,52 +214,14 @@
     </div>
     
     <div class="plot-container">
-        <div class="plot-header">Plot Points</div>
-        <input class="plot-main" type="number" name="attr_plot_points">
-    </div>
-    
-    <div class="dice-container">
+        <h4></h4>
+        <h4 class="plot-header">Plot Points</h4>           
+        <h4></h4>
+        <input class="plot-main" type="number" name="attr_plot_points"> 
+        <h4></h4>
         <h4 class="dice-header">Additional Dice</h4>
-        <div class="toggle-container">
-          <input type="hidden" class="toggle" name="attr_d4_flag" />
-          <button type="action" name="act_d4" class="toggle">
-            <span class="checked">✓</span>
-          </button>
-        </div>
-        <h4 class="dice-menu">d4</h4>
-        <input class="dice-main" type="number" name="attr_d6" value="0">
-        <div class="toggle-container">
-          <input type="hidden" class="toggle" name="attr_d6_flag" />
-          <button type="action" name="act_d6" class="toggle">
-            <span class="checked">✓</span>
-          </button>
-        </div>
-        <h4 class="dice-menu">d6</h4>
-        <input class="dice-main" type="number" name="attr_d6" value="0">
-        <div class="toggle-container">
-          <input type="hidden" class="toggle" name="attr_d8_flag" />
-          <button type="action" name="act_d8" class="toggle">
-            <span class="checked">✓</span>
-          </button>
-        </div>
-        <h4 class="dice-menu">d8</h4>
-        <input class="dice-main" type="number" name="attr_d8" value="0">
-        <div class="toggle-container">
-          <input type="hidden" class="toggle" name="attr_d10_flag" />
-          <button type="action" name="act_d10" class="toggle">
-            <span class="checked">✓</span>
-          </button>
-        </div>
-        <h4 class="dice-menu">d10</h4>
-        <input class="dice-main" type="number" name="attr_d10" value="0">
-        <div class="toggle-container">
-          <input type="hidden" class="toggle" name="attr_d12_flag" />
-          <button type="action" name="act_d12" class="toggle">
-            <span class="checked">✓</span>
-          </button>
-        </div>
-        <h4 class="dice-menu">d12</h4>
-        <input class="dice-main" type="number" name="attr_d12" value="0">
+        <input type="checkbox" class="toggle" name="attr_dX_flag" value="1"/>
+        <textarea class="dice-main" type="text" name="attr_dX" value="0"></textarea>
     </div>
     
     <div class="value-container">
@@ -413,7 +376,7 @@
                     <option value="2d10">2d10</option>
                     <option value="2d12">2d12</option>
                 </select>
-                <textarea class="resources-main2" type="text" name="attr_extra_statement"></textarea>
+                <input class="resources-main2" type="text" name="attr_extra_statement">
                 <div></div>
                 <input type="checkbox" class="toggle" name="attr_location_flag" value="1"/>
                 <input class="resources-main1" type="text" name="attr_location_name">
@@ -425,33 +388,37 @@
                     <option value="2d10">2d10</option>
                     <option value="2d12">2d12</option>
                 </select>
-                <textarea class="resources-main2" type="text" name="attr_location_statement"></textarea>
+                <input class="resources-main2" type="text" name="attr_location_statement">
             </div>
         </fieldset>
     </div>
 </div>
 
-<input type="text" name="attr_dice_pool" value=''>
+<div class="rolling">
+    <input class="rolling-main" type="text" name="attr_dice_pool" value=''>
+    <button clss="rolling-button" type="roll" name="roll_dice_pool" value="/roll {@{dice_pool}}kh2">ROLL</button>
+</div>
 
 <script type="text/worker">
 const int = (value, error = 0) => parseInt(value) || error;
-const dicepool_attributes = ['afraid', 'angry', 'exhausted', 'insecure', 'injured', 'duty', 'glory', 'justice', 'love', 'power', 'truth'];
-const dicepool_sections = ['relationship', 'asset', 'extra', 'location'];
-const dicepool_changes = `${dicepool_attributes.forEach(stat => `change:${stat}_flag`).join(' ')} ${dicepool_sections.forEach(stat => `change:repeating_${stat}:${stat}_flag`).join(' ')}`;
+const dicepool_attributes = ['afraid', 'angry', 'exhausted', 'insecure', 'injured', 'duty', 'glory', 'justice', 'love', 'power', 'truth', 'dX'];
+const dicepool_sections = ['relationship', 'asset', 'resources:extra', 'resources:location'];
+const dicepool_changes = `${dicepool_attributes.reduce((result,stat) => `${result} change:${stat} change:${stat}_flag`, '')} ${dicepool_sections.reduce((result,stat) => `${result} ${stat.includes(':') ? `change:repeating_${stat.split(':')[0]}:${stat.split(':')[1]} change:repeating_${stat.split(':')[0]}:${stat.split(':')[1]}_flag` : `change:repeating_${stat}:${stat} change:repeating_${stat}:${stat}_flag`}`, '')}`;
 on(dicepool_changes, () => {
+    console.log(dicepool_changes);
     getSectionIDs('repeating_relationship', id_relationships => {
         getSectionIDs('repeating_asset', id_assets => {
-            getSectionIDs('repeating_extra', id_extras => {
-                getSectionIDs('repeating_location', id_locations => {
+            getSectionIDs('repeating_resources', id_extras => {
+                getSectionIDs('repeating_resources', id_locations => {
                     const fieldnames = [];
                     id_relationships.forEach(id => fieldnames.push(
                         `repeating_relationship_${id}_relationship`,`repeating_relationship_${id}_relationship_flag`));
                     id_assets.forEach(id => fieldnames.push(
                         `repeating_asset_${id}_asset`,`repeating_asset_${id}_asset_flag`));
                     id_extras.forEach(id => fieldnames.push(
-                        `repeating_extra_${id}_extra`,`repeating_extra_${id}_extra_flag`));
+                        `repeating_resources_${id}_extra`,`repeating_resources_${id}_extra_flag`));
                     id_locations.forEach(id => fieldnames.push(
-                        `repeating_location_${id}_location`,`repeating_location_${id}_location_flag`));
+                        `repeating_resources_${id}_location`,`repeating_resources_${id}_location_flag`));
                     dicepool_attributes.forEach(stat => fieldnames.push(
                         stat, `${stat}_flag`
                     ));
@@ -461,21 +428,22 @@ on(dicepool_changes, () => {
                             const flag = int(values[`${stat}_flag`]);
                             if(flag) diceout.push(values[stat]);
                         });
-                        const getDiceFromSection = (section, ids) => {
+                        const getDiceFromSection = (section, stat, ids) => {
                             const output = [];
                             ids.forEach(id => {
-                                const flag = int(values[`repeating_${section}_${id}_${section}_flag`]);
-                                if(flag) output.push(values[`repeating_${section}_${id}_${section}`]);
+                                const flag = int(values[`repeating_${section}_${id}_${stat}_flag`]);
+                                if(flag) output.push(values[`repeating_${section}_${id}_${stat}`]);
                             });
                             return output;
                         };
-                        const relationships = getDiceFromSection('relationship', id_relationships);
-                        const assets = getDiceFromSection('asset', id_assets);
-                        const extras = getDiceFromSection('extra', id_extras);
-                        const locations = getDiceFromSection('location', id_locations);
+                        const relationships = getDiceFromSection('relationship', 'relationship', id_relationships);
+                        const assets = getDiceFromSection('asset', 'asset', id_assets);
+                        const extras = getDiceFromSection('resources', 'extra', id_extras);
+                        const locations = getDiceFromSection('resources', 'location', id_locations);
                         diceout = [...diceout, ...relationships, ...assets, ...extras, ...locations];
+    
                         setAttrs({
-                            dice_pool: diceout.length() === 0 ? '0' : diceout.join(' + ')
+                            dice_pool: diceout.length === 0 ? '0' : diceout.join(' + ')
                         });
                     });
                 });
@@ -484,21 +452,16 @@ on(dicepool_changes, () => {
     });
 });
 
-on("change:dutybase", function() {  
-	getAttrs(["dutybase"], function(values) {
-		let dutybase = values.dutybase;
-		setAttrs({                            
-			duty: dutybase
-		});
-	});
-});
-on("change:glorybase", function() {  
-	getAttrs(["glorybase"], function(values) {
-		let glorybase = values.glorybase;
-		setAttrs({                            
-			glory: glorybase
-		});
-	});
+const stats = ['duty', 'glory', 'justice', 'love', 'power', 'truth'];
+stats.forEach(stat => {
+    on(`change:${stat}base`, () => {  
+        getAttrs([`${stat}base`], (values) => {
+            let base = values[`${stat}base`];
+            setAttrs({                            
+                [stat]: base
+            });
+        });
+    });
 });
 
 const diceValues= ['0','d4','d6','d8','d10','d12'];
