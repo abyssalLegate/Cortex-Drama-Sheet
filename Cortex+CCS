@@ -1,15 +1,32 @@
+/*Configure the tab buttons*/
+.sheet-home,
+.sheet-speeddial,
+.sheet-background {
+	display: none;
+}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="home"] ~ div.sheet-home,
+.sheet-tabstoggle[value="speeddial"] ~ div.sheet-speeddial,
+.sheet-tabstoggle[value="background"] ~ div.sheet-background {
+	display: block;
+}
+
+.sheet-home-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "box1 box2";
+    place-items: start / stretch;
+}
 div.sheet-box1 {
-    background: orange;
-    width: 770px;
-    height: 430px;
+    grid-area: box1;
+    background: ;
 }
 div.sheet-box2 {
-    background: blue;
-    position: static;
-    top: -430px;
-    left: 760px;
-    width: 8000px;
-    height: 500px;
+    grid-area: box2;
+    background: ;
 }
 
 /*checkmark section ends here*/
@@ -149,7 +166,7 @@ h4.sheet-relationship-menu {
 div.sheet-asset-container {
     background: white;
     position: relative;
-    top: -202px;
+    top: -186px;
     width: 740px;
     padding: 10px;
 }
@@ -186,10 +203,50 @@ h4.sheet-asset-menu {
     word-wrap: break-word;
 }
 /*Asset Section ends here*/
+.sheet-plot-container {
+    display: grid;
+    background: white;
+    width: 155px;
+    padding: 10px;
+}
+.sheet-plot-header {
+    background: #ffcc00;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
+    margin-left: 10px;
+}
+.sheet-plot-main {
+    grid-column: 2 /span 1;
+    font-size: 27px;
+    text-align: center;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+/*Plot Points and Complications ends here*/
+.sheet-dice-header {
+    grid-column: 2 / span 1;
+    font-weight: bold;
+    background: #8c47d1;
+    color: white;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+.sheet-dice-main {
+    min-width: 120px;
+    max-width: 120px;
+    min-height: 72px;
+    max-height: 72px;
+    margin-left: 10px;
+}
+/*dice Section ends here*/
 .sheet-growth-container {
     display:grid;
     position: relative;
-    left: 22px;
+    left: 165px;
+    top: -198px;
     background: white;
     width: 80px;
     padding: 10px;
@@ -210,48 +267,6 @@ h4.sheet-asset-menu {
     padding-right: 5px;
 }
 /*Growth Section ends here*/
-.sheet-plot-container {
-    display: grid;
-    position: relative;
-    left: 122px;
-    top: -190px;
-    background: white;
-    width: 155px;
-    padding: 10px;
-}
-.sheet-plot-header {
-    background: #ebd647;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    padding-left: 5px;
-    margin-left: 10px;
-}
-.sheet-plot-main {
-    grid-column: 2 /span 1;
-    font-size: 27px;
-    text-align: center;
-    margin-left: 30px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-/*Plot Points and Complications ends here*/
-.sheet-dice-header {
-    grid-column: 2 / span 1;
-    font-weight: bold;
-    background: orange;
-    color: white;
-    padding-left: 10px;
-    margin-left: 10px;
-}
-.sheet-dice-main {
-    min-width: 120px;
-    max-width: 120px;
-    min-height: 72px;
-    max-height: 72px;
-    margin-left: 10px;
-}
-/*dice Section ends here*/
 div.sheet-value-container {
     display:grid;
     background: white;
@@ -298,7 +313,7 @@ h4.sheet-value-header {
 div.sheet-resources {
     background: white;
     position: relative;
-    top: -290px;
+    top: -210px;
     width: 770px;
     padding: 10px;
 }
@@ -337,14 +352,122 @@ h4.sheet-resources-menu {
     font-weight: bold;
 }
 .sheet-resources-main2 {
-    min-width: 152px;
-    max-width: 152px;
+    width: 162px;
     height: 20px;
     margin-left: px;
     word-wrap: break-word;
 }
 /*Extras and Locations Section ends here*/
+/*Home Page Ends Here*/
+.sheet-speed-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 210px;
+    grid-template-areas:
+    "box1 box2"
+    "box3 box3"
+    "box4 box5"
+    "box6 box7";
+    place-items: start / stretch;
+}
+.sheet-speed-box {
+    background: white;
+    width: 210px;
+    padding: 10px;
+    padding-left: 5px;
+}
+.sheet-speed-row {
+    display: grid;
+    grid-template-columns: 15px 120px 60px;
+    column-gap: 5px;
+}
+.sheet-speed-header {
+    grid-column: 2 / span 2;   
+    color: white;
+    font-weight: bold;
+    padding-left: 5px;
+}
+.sheet-speed-menu {
+    width: auto;
+    background: #e6e6e6;
+    font-weight:bold;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.sheet-speed-main {
+    width: auto;
+}
 
+.sheet-box-relationship {
+    grid-area: box1;
+}   
+.sheet-header-relationship {
+    background: #d478a0;
+}
+
+.sheet-box-value {
+    grid-area: box2:
+}
+.sheet-header-value {
+    background: #042254;    
+}
+
+.sheet-box-resource {
+    width: 420px;
+}
+.sheet-row-resource {
+    grid-template-columns: 15px 120px 60px 15px 120px 60px;
+}
+.sheet-header-extra {
+    background: #3578ac;
+    grid-column: 2 / span 2;
+}
+.sheet-header-location {
+    grid-column: 5 / span 2;
+    background: #0f4136;
+}
+
+.sheet-box-asset {
+    grid-area: box4;
+}
+.sheet-header-asset {
+    background: #aa6a6b;
+}
+
+.sheet-box-stress {
+    grid-area: box5;
+
+}
+.sheet-header-stress {
+    background: #a81e48;
+}
+
+.sheet-box-dice {
+    grid-area: box6;
+}
+.sheet-header-dice {
+    background: #8c47d1;
+}
+.sheet-main-dice {
+    grid-column: 2 / span 2;
+    width: 185px;
+    margin-left: 3px;
+}
+
+.sheet-box-plot {
+    grid-area: box7;
+}
+.sheet-header-plot {
+    grid-column: 2;
+    background: #ffcc00;
+    text-align: center;
+}
+.sheet-main-plot {
+    grid-column: 2 ;
+    text-align: center;
+    margin-LEFT: 35px;
+}
+/*Speeddial Page ends here*/
 .sheet-rolling {
     display: block;
     position: fixed;
@@ -353,6 +476,14 @@ h4.sheet-resources-menu {
     width: 600px;
     height: 40px;
     margin: 10px;
+}
+.sheet-collapsible {
+    
+}
+.sheet-content {
+    display: none;
+    overflow: hidden;
+    background: orange;
 }
 .sheet-rolling-main {
     Position: relative;
