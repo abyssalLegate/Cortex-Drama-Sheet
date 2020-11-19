@@ -1,405 +1,566 @@
-<div class="box1">
-    <div class="character-container">
-        <div class="character-header">Character Details</div>
-        <div class="character-menu">Name</div>
-        <input class="character-main1" type="text" name="attr_charname">
-        <div class="character-menu">Alias(es)</div>
-        <input class="character-main" type="text" name="attr_alias">
-        <div class="character-menu">Player</div>
-        <input class="character-main" type="text" name="attr_playname">
-        <div class="character-menu">Descriptors</div>
-        <input class="character-main" type="text" name="attr_descriptors">
-    </div>
-    
-    <div class="stress-container">
-        <div class="stress-row">
-            <h4></h4>
-            <h4 class="stress-header1">Stress</h4>
-            <h4 class="stress-header"></h4>
-            <h4 class="stress-header">d4</h4>
-            <h4 class="stress-header">d6</h4>
-            <h4 class="stress-header">d8</h4>
-            <h4 class="stress-header">d10</h4>
-            <h4 class="stress-header">d12</h4>
-        </div>
-        <div class="stress-row">
-            <input type="checkbox" class="toggle" name="attr_afraid_flag" value="1"/>
-            <div class="stress-menu">AFRAID</div>
-            <input type="hidden" name="attr_afraid" class="dot" value="1" />
-            <button type="action" name="act_afraid_0" class="dot">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_afraid_d4" class="dot gt-0">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_afraid_d6" class="dot gt-0 gt-d4">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_afraid_d8" class="dot gt-0 gt-d4 gt-d6">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_afraid_d10" class="dot gt-0 gt-d4 gt-d6 gt-d8">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_afraid_d12" class="dot gt-0 gt-d4 gt-d6 gt-d8 gt-d10">
-                <span class="checked"></span>
-            </button>
-        </div>
-        <div class="stress-row">
-            <input type="checkbox" class="toggle" name="attr_angry_flag" value="1"/>
-            <div class="stress-menu">ANGRY</div>
-            <input type="hidden" name="attr_angry" class="dot" value="1" />
-            <button type="action" name="act_angry_0" class="dot">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_angry_d4" class="dot gt-0">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_angry_d6" class="dot gt-0 gt-d4">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_angry_d8" class="dot gt-0 gt-d4 gt-d6">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_angry_d10" class="dot gt-0 gt-d4 gt-d6 gt-d8">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_angry_d12" class="dot gt-0 gt-d4 gt-d6 gt-d8 gt-d10">
-                <span class="checked"></span>
-            </button>
-        </div>
-        <div class="stress-row">
-            <input type="checkbox" class="toggle" name="attr_exhausted_flag" value="1"/>
-            <div class="stress-menu">EXHAUSTED</div>
-            <input type="hidden" name="attr_exhausted" class="dot" value="1" />
-            <button type="action" name="act_exhausted_0" class="dot">
-                <span class="checked"></span>
-            <button type="action" name="act_exhausted_d4" class="dot gt-0">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_exhausted_d6" class="dot gt-0 gt-d4">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_exhausted_d8" class="dot gt-0 gt-d4 gt-d6">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_exhausted_d10" class="dot gt-0 gt-d4 gt-d6 gt-d8">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_exhausted_d12" class="dot gt-0 gt-d4 gt-d6 gt-d8 gt-d10">
-                <span class="checked"></span>
-            </button>
-        </div>
-            <div class="stress-row">
-            <input type="checkbox" class="toggle" name="attr_insecure_flag" value="1"/>
-            <div class="stress-menu">INSECURE</div>
-            <input type="hidden" name="attr_insecure" class="dot" value="1" />
-            <button type="action" name="act_insecure_0" class="dot">
-                <span class="checked"></span>
-            <button type="action" name="act_insecure_d4" class="dot gt-0">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_insecure_d6" class="dot gt-0 gt-d4">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_insecure_d8" class="dot gt-0 gt-d4 gt-d6">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_insecure_d10" class="dot gt-0 gt-d4 gt-d6 gt-d8">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_insecure_d12" class="dot gt-0 gt-d4 gt-d6 gt-d8 gt-d10">
-                <span class="checked"></span>
-            </button>
-        </div>
-        <div class="stress-row">
-            <input type="checkbox" class="toggle" name="attr_injured_flag" value="1"/>
-            <div class="stress-menu">INJURED</div>
-            <input type="hidden" name="attr_injured" class="dot" value="1" />
-            <button type="action" name="act_injured_0" class="dot">
-                <span class="checked"></span>
-            <button type="action" name="act_injured_d4" class="dot gt-0">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_injured_d6" class="dot gt-0 gt-d4">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_injured_d8" class="dot gt-0 gt-d4 gt-d6">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_injured_d10" class="dot gt-0 gt-d4 gt-d6 gt-d8">
-                <span class="checked"></span>
-            </button>
-            <button type="action" name="act_injured_d12" class="dot gt-0 gt-d4 gt-d6 gt-d8 gt-d10">
-                <span class="checked"></span>
-            </button>
-        </div>
-    </div>
+<div>
+    <button type="action" name="act_home" >HOME</button>
+    <button type="action" name="act_speeddial" >Speed-Dial</button>
+    <button type="action" name="act_background" >Background</button>
+</div>
+<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='character'  />
 
-    <div class="relationship">
-        <div class="relationship-row">
-            <h4 class="relationship-header">Relationships</h4>
-        </div>
-        <div class="relationship-row">
-            <h4></h4>
-            <h4 class="relationship-menu">Rating</h4>
-            <h4 class="relationship-menu">Current</h4>
-            <h4 class="relationship-menu">Statement</h4>
-        </div>
-        <fieldset class="repeating_relationship">
-            <div class="relationship-row">
-                <input type="checkbox" class="toggle" name="attr_relationship_flag" value="1"/>
-                <select class="relationship-main" name="attr_relationshipbase">
-                    <option value="0" selected>-</option>
-                    <option value="d4">d4</option>
-                    <option value="d6">d6</option>
-                    <option value="d8">d8</option>
-                    <option value="d10">d10</option>
-                    <option value="d12">d12</option>
-                </select>
-                <select class="relationship-main" name="attr_relationship">
-                    <option value="0" selected>-</option>
-                    <option value="d4">d4</option>
-                    <option value="d6">d6</option>
-                    <option value="d8">d8</option>
-                    <option value="d10">d10</option>
-                    <option value="d12">d12</option>
-                </select>
-                <input class="relationship-main1" type="text" name="attr_relationship_statement">
+<div class='sheet-home'>
+    <div class="home-container">
+        <div class="box1">
+            <div class="character-container">
+                <div class="character-header">Character Details</div>
+                <div class="character-menu">Name</div>
+                <input class="character-main1" type="text" name="attr_charname">
+                <div class="character-menu">Alias(es)</div>
+                <input class="character-main" type="text" name="attr_alias">
+                <div class="character-menu">Player</div>
+                <input class="character-main" type="text" name="attr_playname">
+                <div class="character-menu">Descriptors</div>
+                <input class="character-main" type="text" name="attr_descriptors">
             </div>
-        </fieldset>
-    </div>
-
-    <div class="asset-container">
-        <div class="asset-row">
-            <h4 class="asset-header">Assets</h4>
+            
+            <div class="stress-container">
+                <div class="stress-row">
+                    <h4></h4>
+                    <h4 class="stress-header1">Stress</h4>
+                    <h4 class="stress-header"></h4>
+                    <h4 class="stress-header">d4</h4>
+                    <h4 class="stress-header">d6</h4>
+                    <h4 class="stress-header">d8</h4>
+                    <h4 class="stress-header">d10</h4>
+                    <h4 class="stress-header">d12</h4>
+                </div>
+                <div class="stress-row">
+                    <input type="checkbox" class="toggle" name="attr_afraid_flag" value="1"/>
+                    <div class="stress-menu">AFRAID</div>
+                    <input type="hidden" name="attr_afraid" class="dot" value="1" />
+                    <button type="action" name="act_afraid_0" class="dot">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_afraid_d4" class="dot gt-0">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_afraid_d6" class="dot gt-0 gt-d4">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_afraid_d8" class="dot gt-0 gt-d4 gt-d6">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_afraid_d10" class="dot gt-0 gt-d4 gt-d6 gt-d8">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_afraid_d12" class="dot gt-0 gt-d4 gt-d6 gt-d8 gt-d10">
+                        <span class="checked"></span>
+                    </button>
+                </div>
+                <div class="stress-row">
+                    <input type="checkbox" class="toggle" name="attr_angry_flag" value="1"/>
+                    <div class="stress-menu">ANGRY</div>
+                    <input type="hidden" name="attr_angry" class="dot" value="1" />
+                    <button type="action" name="act_angry_0" class="dot">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_angry_d4" class="dot gt-0">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_angry_d6" class="dot gt-0 gt-d4">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_angry_d8" class="dot gt-0 gt-d4 gt-d6">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_angry_d10" class="dot gt-0 gt-d4 gt-d6 gt-d8">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_angry_d12" class="dot gt-0 gt-d4 gt-d6 gt-d8 gt-d10">
+                        <span class="checked"></span>
+                    </button>
+                </div>
+                <div class="stress-row">
+                    <input type="checkbox" class="toggle" name="attr_exhausted_flag" value="1"/>
+                    <div class="stress-menu">EXHAUSTED</div>
+                    <input type="hidden" name="attr_exhausted" class="dot" value="1" />
+                    <button type="action" name="act_exhausted_0" class="dot">
+                        <span class="checked"></span>
+                    <button type="action" name="act_exhausted_d4" class="dot gt-0">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_exhausted_d6" class="dot gt-0 gt-d4">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_exhausted_d8" class="dot gt-0 gt-d4 gt-d6">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_exhausted_d10" class="dot gt-0 gt-d4 gt-d6 gt-d8">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_exhausted_d12" class="dot gt-0 gt-d4 gt-d6 gt-d8 gt-d10">
+                        <span class="checked"></span>
+                    </button>
+                </div>
+                    <div class="stress-row">
+                    <input type="checkbox" class="toggle" name="attr_insecure_flag" value="1"/>
+                    <div class="stress-menu">INSECURE</div>
+                    <input type="hidden" name="attr_insecure" class="dot" value="1" />
+                    <button type="action" name="act_insecure_0" class="dot">
+                        <span class="checked"></span>
+                    <button type="action" name="act_insecure_d4" class="dot gt-0">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_insecure_d6" class="dot gt-0 gt-d4">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_insecure_d8" class="dot gt-0 gt-d4 gt-d6">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_insecure_d10" class="dot gt-0 gt-d4 gt-d6 gt-d8">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_insecure_d12" class="dot gt-0 gt-d4 gt-d6 gt-d8 gt-d10">
+                        <span class="checked"></span>
+                    </button>
+                </div>
+                <div class="stress-row">
+                    <input type="checkbox" class="toggle" name="attr_injured_flag" value="1"/>
+                    <div class="stress-menu">INJURED</div>
+                    <input type="hidden" name="attr_injured" class="dot" value="1" />
+                    <button type="action" name="act_injured_0" class="dot">
+                        <span class="checked"></span>
+                    <button type="action" name="act_injured_d4" class="dot gt-0">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_injured_d6" class="dot gt-0 gt-d4">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_injured_d8" class="dot gt-0 gt-d4 gt-d6">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_injured_d10" class="dot gt-0 gt-d4 gt-d6 gt-d8">
+                        <span class="checked"></span>
+                    </button>
+                    <button type="action" name="act_injured_d12" class="dot gt-0 gt-d4 gt-d6 gt-d8 gt-d10">
+                        <span class="checked"></span>
+                    </button>
+                </div>
+            </div>
+        
+            <div class="relationship">
+                <div class="relationship-row">
+                    <h4 class="relationship-header">Relationships</h4>
+                </div>
+                <div class="relationship-row">
+                    <h4></h4>
+                    <h4 class="relationship-menu">Rating</h4>
+                    <h4 class="relationship-menu">Current</h4>
+                    <h4 class="relationship-menu">Statement</h4>
+                </div>
+                <fieldset class="repeating_relationship">
+                    <div class="relationship-row">
+                        <input type="checkbox" class="toggle" name="attr_relationship_flag" value="1"/>
+                        <select class="relationship-main" name="attr_relationshipbase">
+                            <option value="0" selected>-</option>
+                            <option value="d4">d4</option>
+                            <option value="d6">d6</option>
+                            <option value="d8">d8</option>
+                            <option value="d10">d10</option>
+                            <option value="d12">d12</option>
+                        </select>
+                        <select class="relationship-main" name="attr_relationship">
+                            <option value="0" selected>-</option>
+                            <option value="d4">d4</option>
+                            <option value="d6">d6</option>
+                            <option value="d8">d8</option>
+                            <option value="d10">d10</option>
+                            <option value="d12">d12</option>
+                        </select>
+                        <input class="relationship-main1" type="text" name="attr_relationship_statement">
+                    </div>
+                </fieldset>
+            </div>
+        
+            <div class="asset-container">
+                <div class="asset-row">
+                    <h4 class="asset-header">Assets</h4>
+                </div>
+                <div class="asset-row">
+                    <h4></h4>
+                    <h4 class="asset-menu">Name</h4>
+                    <h4 class="asset-menu">Rating</h4>
+                    <h4 class="asset-menu">Trggers and Effects</h4>
+                </div>
+                <fieldset class="repeating_asset">
+                    <div class="asset-row">
+                        <input type="checkbox" class="toggle" name="attr_asset_flag" value="1"/>
+                        <input class="asset-main1" type="text" name="attr_asset_name">
+                        <select class="asset-main" name="attr_asset">
+                            <option value="0" selected>-</option>
+                            <option value="d4">d4</option>
+                            <option value="d6">d6</option>
+                            <option value="d8">d8</option>
+                            <option value="d10">d10</option>
+                            <option value="d12">d12</option>
+                        </select>
+                        <textarea class="asset-main2" type="text" name="attr_asset_statement"></textarea>
+                    </div>
+                </fieldset>
+            </div>
         </div>
-        <div class="asset-row">
-            <h4></h4>
-            <h4 class="asset-menu">Name</h4>
-            <h4 class="asset-menu">Rating</h4>
-            <h4 class="asset-menu">Trggers and Effects</h4>
-        </div>
-        <fieldset class="repeating_asset">
-            <div class="asset-row">
-                <input type="checkbox" class="toggle" name="attr_asset_flag" value="1"/>
-                <input class="asset-main1" type="text" name="attr_asset_name">
-                <select class="asset-main" name="attr_asset">
+        
+        <div class="box2">
+            <div class="plot-container">
+                <h4></h4>
+                <h4 class="plot-header">Plot Points</h4>           
+                <h4></h4>
+                <input class="plot-main" type="number" name="attr_plot_points" value="2"> 
+                <h4></h4>
+                <h4 class="dice-header">Additional Dice</h4>
+                <input type="checkbox" class="toggle" name="attr_dX_flag" value="1"/>
+                <textarea class="dice-main" type="text" name="attr_dX" value="0"></textarea>
+            </div>
+        
+            <div class="growth-container">
+                <div class="growth-header">Growth</div>
+                <div class="growth-menu">d4</div>
+                <input class="growth-main" type="number" name="attr_growd4">
+                <div class="growth-menu">d6</div>
+                <input class="growth-main" type="number" name="attr_growd6">
+                <div class="growth-menu">d8</div>
+                <input class="growth-main" type="number" name="attr_growd8">
+                <div class="growth-menu">d10</div>
+                <input class="growth-main" type="number" name="attr_growd10">
+                <div class="growth-menu">d12</div>
+                <input class="growth-main" type="number" name="attr_growd12">
+            </div>
+            
+            <div class="value-container">
+                <h4 class="value-header">Values</h4>
+                <h4></h4>
+                <h4 class="value-header2"></h4>
+                <h4 class="value-header1">Rating</h4>
+                <h4 class="value-header1">Current</h4>
+                <h4 class="value-header1">Statement</h4>
+                <input type="checkbox" class="toggle" name="attr_duty_flag" value="1"/>
+                <div class="value-menu">DUTY</div>
+                <select class="value-main" name="attr_dutybase">
                     <option value="0" selected>-</option>
                     <option value="d4">d4</option>
                     <option value="d6">d6</option>
                     <option value="d8">d8</option>
                     <option value="d10">d10</option>
-                    <option value="d12">d12</option>
+                    <option value="d12">d12</option> 
                 </select>
-                <textarea class="asset-main2" type="text" name="attr_asset_statement"></textarea>
+                <select class="value-main" name="attr_duty">
+                    <option value="0" selected>-</option>
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option> 
+                </select>
+                <input class="value-main1" type="text" name="attr_duty_statement">
+                <input type="checkbox" class="toggle" name="attr_glory_flag" value="1"/>
+                <div class="value-menu">GLORY</div>
+                <select class="value-main" name="attr_glorybase">
+                    <option value="0" selected>-</option>
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option> 
+                </select>
+                <select class="value-main" name="attr_glory">
+                    <option value="0" selected>-</option>
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option> 
+                </select>
+                <input class="value-main1" type="text" name="attr_glory_statement">
+                <input type="checkbox" class="toggle" name="attr_justice_flag" value="1"/>
+                <div class="value-menu">JUSTICE</div>
+                <select class="value-main" name="attr_justicebase">
+                    <option value="0" selected>-</option>
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option> 
+                </select>
+                <select class="value-main" name="attr_justice">
+                    <option value="0" selected>-</option>
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option> 
+                </select>
+                <input class="value-main1" type="text" name="attr_justice_statement">
+                <input type="checkbox" class="toggle" name="attr_love_flag" value="1"/>
+                <div class="value-menu">LOVE</div>
+                <select class="value-main" name="attr_lovebase">
+                    <option value="0" selected>-</option>
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option> 
+                </select>
+                <select class="value-main" name="attr_love">
+                    <option value="0" selected>-</option>
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option> 
+                </select>
+                <input class="value-main1" type="text" name="attr_love_statement">
+                <input type="checkbox" class="toggle" name="attr_power_flag" value="1"/>
+                <div class="value-menu">POWER</div>
+                <select class="value-main" name="attr_powerbase">
+                    <option value="0" selected>-</option>
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option> 
+                </select>
+                <select class="value-main" name="attr_power">
+                    <option value="0" selected>-</option>
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option> 
+                </select>
+                <input class="value-main1" type="text" name="attr_power_statement">
+                <input type="checkbox" class="toggle" name="attr_truth_flag" value="1"/>
+                <div class="value-menu">TRUTH</div>
+                <select class="value-main" name="attr_truthbase">
+                    <option value="0" selected>-</option>
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option> 
+                </select>
+                <select class="value-main" name="attr_truth">
+                    <option value="0" selected>-</option>
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option> 
+                </select>
+                <input class="value-main1" type="text" name="attr_truth_statement">
             </div>
-        </fieldset>
+            
+            <div class="resources">
+                <div class="resources-row">
+                    <h4 class="extra-header">Extra</h4>
+                    <h4></h4>
+                    <h4 class="locations-header">Locations</h4>
+                </div>
+                <div class="resources-row">
+                    <h4></h4>
+                    <h4 class="resources-menu">Name</h4>
+                    <h4 class="resources-menu">Rating</h4>
+                    <h4 class="resources-menu">Properties</h4>
+                    <h4></h4>
+                    <h4></h4>
+                    <h4 class="resources-menu">Name</h4>
+                    <h4 class="resources-menu">Rating</h4>
+                    <h4 class="resources-menu">Properties</h4>
+                </div>
+                <fieldset class="repeating_resources">
+                    <div class="resources-row">
+                        <input type="checkbox" class="toggle" name="attr_extra_flag" value="1"/>
+                        <input class="resources-main1" type="text" name="attr_extra_name">
+                        <select class="resources-main" name="attr_extra">
+                            <option value="0" selected>-</option>
+                            <option value="2d4">2d4</option>
+                            <option value="2d6">2d6</option>
+                            <option value="2d8">2d8</option>
+                            <option value="2d10">2d10</option>
+                            <option value="2d12">2d12</option>
+                        </select>
+                        <input class="resources-main2" type="text" name="attr_extra_statement">
+                        <div></div>
+                        <input type="checkbox" class="toggle" name="attr_location_flag" value="1"/>
+                        <input class="resources-main1" type="text" name="attr_location_name">
+                        <select class="resources-main" name="attr_location">
+                            <option value="0" selected>-</option>
+                            <option value="2d4">2d4</option>
+                            <option value="2d6">2d6</option>
+                            <option value="2d8">2d8</option>
+                            <option value="2d10">2d10</option>
+                            <option value="2d12">2d12</option>
+                        </select>
+                        <input class="resources-main2" type="text" name="attr_location_statement">
+                    </div>
+                </fieldset>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="box2">
-    <div class="growth-container">
-        <div class="growth-header">Growth</div>
-        <div class="growth-menu">d4</div>
-        <input class="growth-main" type="number" name="attr_growd4">
-        <div class="growth-menu">d6</div>
-        <input class="growth-main" type="number" name="attr_growd6">
-        <div class="growth-menu">d8</div>
-        <input class="growth-main" type="number" name="attr_growd8">
-        <div class="growth-menu">d10</div>
-        <input class="growth-main" type="number" name="attr_growd10">
-        <div class="growth-menu">d12</div>
-        <input class="growth-main" type="number" name="attr_growd12">
-    </div>
-    
-    <div class="plot-container">
-        <h4></h4>
-        <h4 class="plot-header">Plot Points</h4>           
-        <h4></h4>
-        <input class="plot-main" type="number" name="attr_plot_points"> 
-        <h4></h4>
-        <h4 class="dice-header">Additional Dice</h4>
-        <input type="checkbox" class="toggle" name="attr_dX_flag" value="1"/>
-        <textarea class="dice-main" type="text" name="attr_dX" value="0"></textarea>
-    </div>
-    
-    <div class="value-container">
-        <h4 class="value-header">Values</h4>
-        <h4></h4>
-        <h4 class="value-header2"></h4>
-        <h4 class="value-header1">Rating</h4>
-        <h4 class="value-header1">Current</h4>
-        <h4 class="value-header1">Statement</h4>
-        <input type="checkbox" class="toggle" name="attr_duty_flag" value="1"/>
-        <div class="value-menu">DUTY</div>
-        <select class="value-main" name="attr_dutybase">
-            <option value="0" selected>-</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option> 
-        </select>
-        <select class="value-main" name="attr_duty">
-            <option value="0" selected>-</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option> 
-        </select>
-        <input class="value-main1" type="text" name="attr_duty_statement">
-        <input type="checkbox" class="toggle" name="attr_glory_flag" value="1"/>
-        <div class="value-menu">GLORY</div>
-        <select class="value-main" name="attr_glorybase">
-            <option value="0" selected>-</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option> 
-        </select>
-        <select class="value-main" name="attr_glory">
-            <option value="0" selected>-</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option> 
-        </select>
-        <input class="value-main1" type="text" name="attr_glory_statement">
-        <input type="checkbox" class="toggle" name="attr_justice_flag" value="1"/>
-        <div class="value-menu">JUSTICE</div>
-        <select class="value-main" name="attr_justicebase">
-            <option value="0" selected>-</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option> 
-        </select>
-        <select class="value-main" name="attr_justice">
-            <option value="0" selected>-</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option> 
-        </select>
-        <input class="value-main1" type="text" name="attr_justice_statement">
-        <input type="checkbox" class="toggle" name="attr_love_flag" value="1"/>
-        <div class="value-menu">LOVE</div>
-        <select class="value-main" name="attr_lovebase">
-            <option value="0" selected>-</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option> 
-        </select>
-        <select class="value-main" name="attr_love">
-            <option value="0" selected>-</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option> 
-        </select>
-        <input class="value-main1" type="text" name="attr_love_statement">
-        <input type="checkbox" class="toggle" name="attr_power_flag" value="1"/>
-        <div class="value-menu">POWER</div>
-        <select class="value-main" name="attr_powerbase">
-            <option value="0" selected>-</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option> 
-        </select>
-        <select class="value-main" name="attr_power">
-            <option value="0" selected>-</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option> 
-        </select>
-        <input class="value-main1" type="text" name="attr_power_statement">
-        <input type="checkbox" class="toggle" name="attr_truth_flag" value="1"/>
-        <div class="value-menu">TRUTH</div>
-        <select class="value-main" name="attr_truthbase">
-            <option value="0" selected>-</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option> 
-        </select>
-        <select class="value-main" name="attr_truth">
-            <option value="0" selected>-</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option> 
-        </select>
-        <input class="value-main1" type="text" name="attr_truth_statement">
-    </div>
-    
-    <div class="resources">
-        <div class="resources-row">
-            <h4 class="extra-header">Extra</h4>
-            <h4></h4>
-            <h4 class="locations-header">Locations</h4>
-        </div>
-        <div class="resources-row">
-            <h4></h4>
-            <h4 class="resources-menu">Name</h4>
-            <h4 class="resources-menu">Rating</h4>
-            <h4 class="resources-menu">Properties</h4>
-            <h4></h4>
-            <h4></h4>
-            <h4 class="resources-menu">Name</h4>
-            <h4 class="resources-menu">Rating</h4>
-            <h4 class="resources-menu">Properties</h4>
-        </div>
-        <fieldset class="repeating_resources">
-            <div class="resources-row">
-                <input type="checkbox" class="toggle" name="attr_extra_flag" value="1"/>
-                <input class="resources-main1" type="text" name="attr_extra_name">
-                <select class="resources-main" name="attr_extra">
-                    <option value="0" selected>-</option>
-                    <option value="2d4">2d4</option>
-                    <option value="2d6">2d6</option>
-                    <option value="2d8">2d8</option>
-                    <option value="2d10">2d10</option>
-                    <option value="2d12">2d12</option>
-                </select>
-                <input class="resources-main2" type="text" name="attr_extra_statement">
-                <div></div>
-                <input type="checkbox" class="toggle" name="attr_location_flag" value="1"/>
-                <input class="resources-main1" type="text" name="attr_location_name">
-                <select class="resources-main" name="attr_location">
-                    <option value="0" selected>-</option>
-                    <option value="2d4">2d4</option>
-                    <option value="2d6">2d6</option>
-                    <option value="2d8">2d8</option>
-                    <option value="2d10">2d10</option>
-                    <option value="2d12">2d12</option>
-                </select>
-                <input class="resources-main2" type="text" name="attr_location_statement">
+<div class='sheet-speeddial'>
+    <div class="speed-container">
+        <div class="speed-box box-relationship">
+            <div class="speed-row">
+                <h4 class="speed-header header-relationship">Relationships</h4>    
             </div>
-        </fieldset>
+            <fieldset class="repeating_relationship">
+                <div class="speed-row">
+                    <input type="checkbox" class="toggle" name="attr_relationship_flag" value="1"/>
+                    <input class="speed-menu" type="text" name="attr_relationship_name">
+                    <input class="speed-main" type="text" name="attr_relationship" readonly>
+                </div>
+            </fieldset>
+        </div>
+        
+        <div class="speed-box box-value">
+            <div class="speed-row">
+                <h4 class="speed-header header-value">Values</h4>
+            </div>
+            <div class="speed-row">
+                <input type="checkbox" class="toggle" name="attr_duty_flag" value="1"/>
+                <span class="speed-menu">DUTY</span>  
+                <input class="speed-main" type="text" name="attr_duty" readonly>               
+            </div>
+            <div class="speed-row">
+                <input type="checkbox" class="toggle" name="attr_glory_flag" value="1"/>
+                <span class="speed-menu">GLORY</span>  
+                <input class="speed-main" type="text" name="attr_glory" readonly>               
+            </div>
+            <div class="speed-row">
+                <input type="checkbox" class="toggle" name="attr_justice_flag" value="1"/>
+                <span class="speed-menu">JUSTICE</span>  
+                <input class="speed-main" type="text" name="attr_justice" readonly>               
+            </div>
+            <div class="speed-row">
+                <input type="checkbox" class="toggle" name="attr_love_flag" value="1"/>
+                <span class="speed-menu">LOVE</span>  
+                <input class="speed-main" type="text" name="attr_love" readonly>               
+            </div>
+            <div class="speed-row">
+                <input type="checkbox" class="toggle" name="attr_power_flag" value="1"/>
+                <span class="speed-menu">POWER</span>  
+                <input class="speed-main" type="text" name="attr_power" readonly>               
+            </div>
+            <div class="speed-row">
+                <input type="checkbox" class="toggle" name="attr_truth_flag" value="1"/>
+                <span class="speed-menu">TRUTH</span>  
+                <input class="speed-main" type="text" name="attr_truth" readonly>               
+            </div>
+        </div>
+        
+        <div class="speed-box box-resource">
+            <div class="speed-row row-resource">
+                <h4 class="speed-header header-extra">Extras</h4>
+                <h4 class="speed-header header-location">Locations</h4>
+            </div>
+            <fieldset class="repeating_resources">
+                <div class="speed-row row-resource">
+                    <input type="checkbox" class="toggle" name="attr_extra_flag" value="1"/>
+                    <input class="speed-menu" type="text" name="attr_extra_name" readonly>
+                    <input class="speed-main" type="text" name="attr_extra" readonly>
+                    <input type="checkbox" class="toggle" name="attr_location_flag" value="1"/>
+                    <input class="speed-menu" type="text" name="attr_location_name" readonly>
+                    <input class="speed-main" type="text" name="attr_location" readonly>
+                </div>
+            </fieldset>  
+        </div>
+        
+        <div class="speed-box box-asset">
+            <div class="speed-row">
+                <h4 class="speed-header header-asset">Assets</h4>
+            </div>
+            <fieldset class="repeating_asset">
+                <div class="speed-row">
+                    <input type="checkbox" class="toggle" name="attr_asset_flag" value="1"/>
+                    <input class="speed-menu" type="text" name="attr_asset_name">
+                    <input class="speed-main" type="text" name="attr_asset" readonly>                      
+                </div>
+            </fieldset>
+        </div>
+        
+        <div class="speed-box box-stress">
+            <div class="speed-row">
+                <h4 class="speed-header header-stress">Stress</h4>
+            </div>
+            <div class="speed-row">
+                <input type="checkbox" class="toggle" name="attr_afraid_flag" value="1"/>
+                <span class="speed-menu">AFRAID</span>  
+                <input class="speed-main" type="text" name="attr_afraid" readonly>  
+            </div>
+            <div class="speed-row">
+                <input type="checkbox" class="toggle" name="attr_angry_flag" value="1"/>
+                <span class="speed-menu">ANGRY</span>  
+                <input class="speed-main" type="text" name="attr_angry" readonly>  
+            </div>
+            <div class="speed-row">
+                <input type="checkbox" class="toggle" name="attr_exhausted_flag" value="1"/>
+                <span class="speed-menu">EXHAUSTED</span>  
+                <input class="speed-main" type="text" name="attr_exhausted" readonly>  
+            </div>
+            <div class="speed-row">
+                <input type="checkbox" class="toggle" name="attr_insecure_flag" value="1"/>
+                <span class="speed-menu">INSECURE</span>  
+                <input class="speed-main" type="text" name="attr_insecure" readonly>  
+            </div>
+            <div class="speed-row">
+                <input type="checkbox" class="toggle" name="attr_injured_flag" value="1"/>
+                <span class="speed-menu">INJURED</span>  
+                <input class="speed-main" type="text" name="attr_injured" readonly>  
+            </div>
+        </div>
+        
+        <div class="speed-box box-dice">
+            <div class="speed-row">
+                <h4 class="speed-header header-dice">Additional Dice</h4>
+            </div>
+            <div class="speed row">
+                <input type="checkbox" class="toggle" name="attr_dx_flag" value="1"/>
+                <input class="speed-main main-dice" type="text" name="attr_dX">
+            </div>
+        </div>
+        
+        <div class="speed-box box-plot">
+            <div class="speed-row">
+                <h4 class="speed-header header-plot">Plot Points</h4>
+            </div>
+            <div class="speed-row">
+                <input class="speed-main main-plot" type="number" name="attr_plot_points" value="2">
+            </div>
+        </div>
     </div>
+</div>
+
+<div class='sheet-background'>
+    <div class="background-container"></div>
 </div>
 
 <div class="rolling">
-    <input class="rolling-main" type="text" name="attr_dice_pool" value=''>
+    <button type="button" class="collapsible">Advanced</button>
+    <div class="content">
+        <button type="roll" name="attr_aid" value="/roll {@{dice_pool}}kh1">AID</button>
+    </div>
+    <input class="rolling-main" type="text" name="attr_dice_pool" value='' readonly>
     <button clss="rolling-button" type="roll" name="roll_dice_pool" value="/roll {@{dice_pool}}kh2">ROLL</button>
 </div>
 
 <script type="text/worker">
+const buttonlist = ["home","speeddial","background"];
+buttonlist.forEach(button => {
+    on(`clicked:${button}`, function() {
+        setAttrs({
+            sheetTab: button
+        });
+    });
+});
+
 const int = (value, error = 0) => parseInt(value) || error;
 const dicepool_attributes = ['afraid', 'angry', 'exhausted', 'insecure', 'injured', 'duty', 'glory', 'justice', 'love', 'power', 'truth', 'dX'];
 const dicepool_sections = ['relationship', 'asset', 'resources:extra', 'resources:location'];
@@ -452,14 +613,24 @@ on(dicepool_changes, () => {
     });
 });
 
-const stats = ['duty', 'glory', 'justice', 'love', 'power', 'truth'];
-stats.forEach(stat => {
-    on(`change:${stat}base`, () => {  
-        getAttrs([`${stat}base`], (values) => {
-            let base = values[`${stat}base`];
-            setAttrs({                            
-                [stat]: base
+const autochange_attributes = ['duty', 'glory', 'justice', 'love', 'power', 'truth'];
+const autochange_changes = `${autochange_attributes.reduce((stat) => `change:${stat}base`)} change:repeating_relationship_relationshipbase`;
+
+on(autochange_changes, () => {
+    getSectionIDs('repeating_relationship', id_relationships => {
+        const fieldnames = [];
+        id_relationships.forEach(id => fieldnames.push(
+            `repeating_relationship_${id}_relationshipbase`));
+        autochange_attributes.forEach(stat => fieldnames.push(`${stat}base`));
+        getAttrs(fieldnames, (values) => {
+            const output = {};
+            autochange_attributes.forEach(stat => {
+                output[stat] = values[`${stat}base`];
             });
+            id_relationships.forEach(id => {
+                output[`repeating_relationship_${id}_relationship`] = values[`repeating_relationship_${id}_relationshipbase`];
+            });
+            setAttrs(output);
         });
     });
 });
@@ -475,5 +646,4 @@ conditions.forEach(function(condition) {
         });
     });
 });
-
 </script>
